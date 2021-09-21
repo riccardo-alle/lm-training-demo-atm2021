@@ -1,12 +1,12 @@
 from argparse import ArgumentParser
 from typing import Dict, Any
 
-from lm_demo.corpus.corpus import AmazonCorpus
+from corpus import AmazonCorpus
 
-DEFAULT_CACHE_DIR = "./dataset"
+DEFAULT_CACHE_DIR = "corpus/dataset"
 AVAILABLE_DATASET_TYPES = ["Apparel_v1_00", "Automotive_v1_00", "Baby_v1_00", "Beauty_v1_00", "Books_v1_00"]
 DEFAULT_DATASET_TYPE = "Baby_v1_00"
-DEFAULT_OUTPUT_DIR = "./preprocessed_corpus"
+DEFAULT_OUTPUT_DIR = "corpus/preprocessed_corpus"
 DEFAULT_VAL_SAMPLE_SIZE = 0.1
 
 

@@ -1,10 +1,10 @@
 from argparse import ArgumentParser
 from typing import Dict, Any
 
-from lm_demo.tokenization.tokenizer import BPETokenizer
+from tokenization.tokenizer import BPETokenizer
 
 DEFAULT_VOCAB_SIZE = 30_000
-DEFAULT_OUTPUT_DIR = "./tokenizer"
+DEFAULT_OUTPUT_DIR = "tokenization/tokenizer"
 
 
 def parse_args_to_dict() -> Dict[str, Any]:
