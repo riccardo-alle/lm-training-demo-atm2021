@@ -5,9 +5,9 @@ import logging
 from pytorch_lightning import seed_everything
 from transformers import PreTrainedTokenizerFast
 
-from lm_demo.masked_language_model.trainer import TrainerBuilder
-from lm_demo.masked_language_model.model import RobertaForMaskedLMModule
-from lm_demo.masked_language_model.dataset import LMDataModule
+from masked_language_model.trainer import TrainerBuilder
+from masked_language_model.model import RobertaForMaskedLMModule
+from masked_language_model.dataset import LMDataModule
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
