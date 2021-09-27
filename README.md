@@ -81,7 +81,7 @@ Each .txt file should look like this: one sentence in each line.
 Under the activated environment, run:
 
 ```bash
-python ./corpus/run_corpus_generation.py --corpus-dir path/to/training_corpus_dir
+python ./tokenization/run_tokenizer_training.py --corpus-dir path/to/training_corpus_dir
 ```
 
 where `training_corpus_dir` is the training corpus generated at the previous point.
@@ -101,7 +101,7 @@ and a file called `tokenizer.json` should be visible at the specified `output_di
 Under the activated environment, run:
 
 ```bash
-python ./corpus/run_corpus_generation.py /
+python ./masked_language_model/main.py /
 --job-dir path/to/job_dir
 --path-to-train-set path/to/training_corpus
 --path-to-val-set path/to/validation_corpus
@@ -109,7 +109,29 @@ python ./corpus/run_corpus_generation.py /
 ```
 
 this will train a `RoBERTa` solving the masked language model objective.
-You can monitor the training through `tensorboard`:
+You can monitor the training through `tensorboard`. You can do this by launching:
+
+```bash
+tensorboard --logdir path/to/job_dir/tensorboard
+```
+
+where `path/to/job_dir/tensorboard` is the path pointing to the tensorboard logs (automatically
+saved along training)
 
 ![schema](images/learning_curves.png)
 
+### Testing the model
+
+You can try out the Language Model you have trained by running:
+
+```bash
+python masked_language_model/test_lm.py
+```
+
+Specify an input string to be filled, like `t-shirt stan <MASK>` and the script will provide the following
+output:
+
+```bash
+[{'sequence': 't-shirt stan nowy', 'score': 0.9219169, 'token': 267, 'token_str': ' nowy'},
+{'sequence': 't-shirt stan używany', 'score': 0.063408, 'token': 717, 'token_str': ' używany'},
+{'sequence': 't-shirt stan idealny', 'score': 0.00275171, 'token': 9666, 'token_str': ' idealny'}]
