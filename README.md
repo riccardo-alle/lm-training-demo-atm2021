@@ -3,7 +3,7 @@
 This repository has been created as auxiliary material for the presentation entitled 
 _“Do You Speak Allegro?” Large Scale Language Modeling Using Allegro Offers Data_ held by Riccardo
 Belluzzo during [Allegro Tech Meeting 2021](https://allegro.pl/zobacz/atm2021).
-You can find the slides of the presentation here.
+You can find the slides of the presentation [here](https://www.youtube.com/watch?v=6T-R4kgIbBs&list=PLzveSKBX_3N7yPb4ErB5HJ83eB6XvH37C&index=19).
 
 ### Why Is This Repository Useful?
 
